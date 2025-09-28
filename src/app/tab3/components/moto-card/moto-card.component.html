@@ -1,0 +1,34 @@
+@if (moto) {
+<ion-card class="small-card">
+  @if (moto.imagenUrl) {
+  <img [src]="moto.imagenUrl" alt="{{ moto.marca }} {{ moto.modelo }}" />
+  }
+
+  <ion-card-header>
+    <ion-card-title> {{ moto.marca }} {{ moto.modelo }} </ion-card-title>
+    <ion-card-subtitle>
+      {{ moto.tipo | titlecase }}
+    </ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="moto-details">
+      <ion-text><strong>Cilindrada:</strong> {{ moto.cilindrada }} cc</ion-text
+      ><br />
+      <ion-text
+        ><strong>Precio:</strong> ${{
+          moto.precio | number : "1.0-0"
+        }}</ion-text
+      ><br />
+      <ion-text
+        ><strong>Transmisión:</strong>
+        {{ moto.transmision | titlecase }}</ion-text
+      ><br />
+      <ion-text
+        ><strong>Combustible:</strong>
+        {{ moto.combustible | titlecase }}</ion-text
+      >
+    </div>
+  </ion-card-content>
+</ion-card>
+}

@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Carrito </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Carrito</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="motos-grid">
+    @if (carrito.length > 0) { @for (moto of carrito; track $index) {
+    <app-moto-card [moto]="moto"></app-moto-card>
+    } } @else {
+    <p>No tienes motos en tu carrito</p>
+    }
+  </div>
 </ion-content>
