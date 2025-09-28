@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Apiservice } from 'src/services/apiservice';
+import { IMoto } from './types/moto';
+import { moto_array } from './constant/motos';
 
 @Component({
   selector: 'app-tab1',
@@ -8,6 +11,10 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  motos: IMoto[] = moto_array
+
+  constructor() { }
+
+
 
 }

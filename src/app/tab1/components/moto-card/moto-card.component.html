@@ -1,0 +1,14 @@
+@if (moto) {
+<ion-card class="small-card">
+  @if (moto){
+  <img [src]="moto.imagenUrl" alt="{{ moto.marca }} {{ moto.modelo }}" />
+  }
+  <ion-card-content>
+    <ion-text>
+      <h2>{{ moto.cilindrada }} cc</h2>
+      <p>{{ moto.tipo | titlecase }}</p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
+
+}

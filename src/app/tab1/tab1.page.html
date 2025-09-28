@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Motos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="motos-grid">
+    @for (moto of motos; track $index) {
+
+    <app-moto-card [moto]="moto"> </app-moto-card>
+    }
+  </div>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
